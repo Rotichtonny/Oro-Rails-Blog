@@ -1,5 +1,10 @@
 <h1>Create Post</h1>
 <%= form_for :post, url: posts_path do |f| %>
+    <% if @post.errors.any? %>
+        <% @post.errors.full_messages.each do |msg| %>
+            <div class="alert alert-danger"><%= msg %></div>
+        <% end %>
+    <% end %>
     <div class="form-group">
         <%= f.label:title %><br>
         <%= f.text_field(:title, {:class => 'form-control'}) %>
@@ -9,6 +14,6 @@
         <%= f.text_area(:body, {:class => 'form-control'}) %>
     </div>
     <p>
-        <%= f.submit({:class => 'btn btn-primary'}) %>
+        <%= f.submit({:class => 'btn btn-secondary'}) %>
     </p>
 <% end %>
