@@ -8,6 +8,9 @@ body {
 .card-body{
   background: #f4f4f4;
   margin-top: 10px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
 }
 
 .navbar-right { 
@@ -16,4 +19,15 @@ body {
 
 .delete-right { 
   float:right 
+}
+
+.card-body-comment{
+  margin: 5px;
+}
+
+.comments{
+  padding: 10px;
+  background: white;
+  border: 1px #c1c4c5 solid;
+  border-radius: 5px;
 }

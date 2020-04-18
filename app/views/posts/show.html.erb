@@ -1,4 +1,4 @@
-<div class="card-body">
+<div class="car">
     <h1><%= @post.title %></h1>
     <hr>
     <p><%= @post.body %></p>
@@ -9,3 +9,7 @@
                                 data: {confirm: 'Are you sure?'},
                                 :class => 'btn btn-danger delete-right' %>
 </div>
+<br>
+<%= render 'comments/comments' %>
+<br>
+<%= render 'comments/form' %>
